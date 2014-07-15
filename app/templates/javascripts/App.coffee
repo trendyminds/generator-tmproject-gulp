@@ -1,5 +1,5 @@
 $ = require 'jquery'
-Template = require '../templates/app.hbs'
+Template = require './templates/app.hbs'
 
 class App
 

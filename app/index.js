@@ -63,11 +63,6 @@ var TmprojectGulpGenerator = yeoman.generators.Base.extend({
     this.copy('_package.json', 'package.json');
     this.copy('_gulpfile.js', 'gulpfile.js');
 
-    this.directory('gulp', 'gulp');
-    this.directory('stylesheets', 'app/assets/stylesheets');
-    this.directory('javascripts', 'app/assets/javascripts');
-    this.directory('templates', 'app/assets/templates');
-
     this.mkdir('app/assets/images');
 
     if (this.projectTypeBasic) {
@@ -83,7 +78,12 @@ var TmprojectGulpGenerator = yeoman.generators.Base.extend({
     if (this.projectTypeCraft || this.projectTypeEE) {
       this.mkdir('app/uploads')
     }
-  },
+
+    this.directory('gulp', 'gulp');
+    this.directory('stylesheets', 'app/assets/stylesheets');
+    this.directory('javascripts', 'app/assets/javascripts');
+
+ },
 
   projectfiles: function () {
     this.copy('_gitignore', '.gitignore');
