@@ -13,7 +13,7 @@ gulp.task('copy', ['clean'], function() {
     '!' + globals.appPath + '/assets/{stylesheets,stylesheets/**}',
     '!' + globals.appPath + '/assets/{javascripts,javascripts/**}',
     '!' + globals.appPath + '/assets/{images,images/**}',
-    '!' + globals.appPath + '/assets/{bower_components,bower_components/**}',
+    '!' + globals.appPath + '/{bower_components,bower_components/**}',
     '!' + globals.appPath + '/{_tmp,_tmp/**}'
   ];
 
