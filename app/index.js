@@ -12,7 +12,11 @@ var TmprojectGulpGenerator = yeoman.generators.Base.extend({
 
     this.on('end', function () {
       if (!this.options['skip-install']) {
-        this.installDependencies();
+        this.installDependencies({
+          callback: function () {
+            this.spawnCommand('gulp', ['build'])
+          }.bind(this)
+        });
       }
     });
   },

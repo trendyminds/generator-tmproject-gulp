@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>my project</title>
+  <title><%= projectName %></title>
   <!-- build:css /assets/stylesheets/styles.css -->
   <link rel="stylesheet" href="/_tmp/stylesheets/styles.css">
   <!-- endbuild -->
+
+  <!-- build:js /assets/javascripts/bundle.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
 </head>
 <body>
-  <h1>Hello, welcome to my project!</h1>
+  <h1>Hello, welcome to <%= projectName %>!</h1>
 
   <!-- build:js /assets/javascripts/bundle.js -->
   <script src="/_tmp/javascripts/bundle.js"></script>

@@ -1,11 +1,21 @@
-body {
+// ====================================================================
+// Styles
+//
+// This is where all of the stylesheets are compiled. They are
+//  processed in the order they are imported.
+// ====================================================================
 
-  background-color: gray;
-  box-sizing: border-box;
+// Base
+// ====================================================================
+@import "base/mixins";
+@import "base/base";
+@import "base/layout";
+@import "base/typography";
 
-  p {
-    box-shadow: 2px 2px 2px rgba(0,0,0,.4);
-    color: #333333;
-    border-radius: 5px;
-  }
-}
+// Libraries
+// ====================================================================
+@import "lib/normalize";
+
+// Modules
+// ====================================================================
+@import "modules/example";

@@ -8,7 +8,7 @@ This is a project generator to quick start a new web project. This Yeoman genera
 * [Gulp](http://gulpjs.com/) `$ npm install -g gulp`
 * [Yeoman](http://yeoman.io/) `$ npm install -g yo`
 
-## Installing generator-tmproject
+## Installing generator-tmproject-gulp
 Run `$ npm install -g generator-tmproject-gulp`
 
 ## Setup a new project
@@ -58,12 +58,6 @@ If you need to add Fancybox to your project you can search the Bower library for
 
 ### images/
 Place any project images in this directory. Running `$ gulp build` will move your images to `dist/images` and compress them.
-
-### javascripts/
-You are able to use `.js` and `.coffee` files. If you are running the `$ grunt` process, you may want to restart it when creating new files.
-
-#### Paths
-If you want to reference a `.js` or `.coffee` file in your template you *must* use `_compiled` in your path. For example, if your `.js` file is located at `javascripts/form/myfile.js` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.
 
 #### Using CoffeeScript
 CoffeeScript files must be referenced with a `.js` extension. For example, if your CoffeeScript file is located at `javascripts/form/myfile.coffee` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.

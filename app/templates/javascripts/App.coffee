@@ -1,12 +1,13 @@
 $ = require 'jquery'
-Template = require './templates/app.hbs'
+MyModule = require './modules/MyModule.coffee'
 
 class App
 
   constructor: ->
 
+    myModule = new MyModule()
+
     console.log 'created: App'
-    $('body').append Template()
 
 App
 
