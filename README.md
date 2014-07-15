@@ -1,7 +1,7 @@
 generator-tmproject-gulp
 ===================
 
-This is a project generator to quick start a new web project. This Yeoman generator will set up your directories and provide you with two Grunt tasks: `$ gulp` for development and `$ gulp build` to compile your project.
+This is a project generator to quick start a new web project. This Yeoman generator will set up your directories and provide you with two Gulp tasks: `$ gulp` for development and `$ gulp build` to compile your project.
 
 ## Requirements
 * [node.js](http://nodejs.org/)
@@ -63,7 +63,7 @@ Place any project images in this directory. Running `$ gulp build` will move you
 CoffeeScript files must be referenced with a `.js` extension. For example, if your CoffeeScript file is located at `javascripts/form/myfile.coffee` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.
 
 ### stylesheets/
-You are able to use `.scss` and `.css` files (though I'd recommend just using `.scss`). If you are running the `$ grunt` process, you may want to restart it when creating new files.
+You are able to use `.scss` and `.css` files (though I'd recommend just using `.scss`). If you are running the `$ gulp` process, you may want to restart it when creating new files.
 
 #### Paths
 If you want to reference a `.scss` or `.css` file in your template you *must* use `_compiled` in your path. For example, if your `.scss` file is located at `stylesheets/myfile.scss` your HTML should be `<link rel="stylesheet" href="/_compiled/stylesheets/myfile.css">`.
@@ -75,7 +75,7 @@ This is the compiled version of your web project. You deploy this, and only this
 - `.gitignore`: A standard gitignore file to ignore compiled directories and other OS-based files and folders.
 - `.htaccess`: A basic htaccess file provided by the [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess).
 - `gulpfile.js`: A list of the tasks that run on `$ gulp` and `$ gulp build`
-- `package.json`: A list of dependencies for the Grunt tasks.
+- `package.json`: A list of dependencies for the Gulp tasks.
 
 ## Release History
 * 2014-7-20 - v1.0.0 - Initial release
