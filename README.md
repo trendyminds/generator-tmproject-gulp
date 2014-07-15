@@ -1,47 +1,87 @@
-# generator-tmproject-gulp [![Build Status](https://secure.travis-ci.org/drgfunk/generator-tmproject-gulp.png?branch=master)](https://travis-ci.org/drgfunk/generator-tmproject-gulp)
+generator-tmproject-gulp
+===================
 
-> [Yeoman](http://yeoman.io) generator
+This is a project generator to quick start a new web project. This Yeoman generator will set up your directories and provide you with two Grunt tasks: `$ gulp` for development and `$ gulp build` to compile your project.
 
+## Requirements
+* [node.js](http://nodejs.org/)
+* [Gulp](http://gulpjs.com/) `$ npm install -g gulp`
+* [Yeoman](http://yeoman.io/) `$ npm install -g yo`
 
-## Getting Started
+## Installing generator-tmproject
+Run `$ npm install -g generator-tmproject-gulp`
 
-### What is Yeoman?
+## Setup a new project
+1. Create an empty directory for your project: `$ mkdir ~/Sites/my_new_project && cd $_`
+2. Run the generator: `$ yo tmproject-gulp`
 
-Trick question. It's not a thing. It's this guy:
+## Project directories
+You will be asked a couple basic questions to start your project up. When you are done you should have a project directory that looks like this:
 
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
-
-```bash
-$ npm install -g yo
+```
++ app
+  + bower_components/
+  + assets/images/
+  + assets/javascripts/
+  + assets/stylesheets/  
+  .htaccess
+  index.html
++ dist
+  + assets/javascripts/
+  + assets/images/
+  + assets/stylesheets/
+  .htaccess
+  index.html
++ gulp
+		+ tasks
+	index.js
+.bowerrc
+.gitignore
+bower.json
+Gemfile
+gulpfile.js
+package.json
 ```
 
-### Yeoman Generators
+## About your new project
+### bower_components/
+[Bower](http://bower.io) will manage your project dependencies. If you run jQuery, Fancybox, Flexsider or any other libraries this is where they'll live.
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
+#### Adding libraries to your project
+If you need to add Fancybox to your project you can search the Bower library for it by running `$ bower search fancybox`. Once you find the one you are looking for, just run `$ bower install fancybox -S` and the Fancybox library will now be in `app/bower_components`. You can also remove a dependency by running `$ bower uninstall fancybox -S`.
 
-To install generator-tmproject-gulp from npm, run:
+**Note:** You must use `-S` in your bower command to add the dependency to your `bower.json` file.
 
-```bash
-$ npm install -g generator-tmproject-gulp
-```
+#### Related files
+`.bowerrc`: Configures the path to the `bower_components` directory (don't change this)
+`bower.json`: Specifies all of the dependencies used in the project.
 
-Finally, initiate the generator:
+### images/
+Place any project images in this directory. Running `$ gulp build` will move your images to `dist/images` and compress them.
 
-```bash
-$ yo tmproject-gulp
-```
+### javascripts/
+You are able to use `.js` and `.coffee` files. If you are running the `$ grunt` process, you may want to restart it when creating new files.
 
-### Getting To Know Yeoman
+#### Paths
+If you want to reference a `.js` or `.coffee` file in your template you *must* use `_compiled` in your path. For example, if your `.js` file is located at `javascripts/form/myfile.js` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+#### Using CoffeeScript
+CoffeeScript files must be referenced with a `.js` extension. For example, if your CoffeeScript file is located at `javascripts/form/myfile.coffee` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+### stylesheets/
+You are able to use `.scss` and `.css` files (though I'd recommend just using `.scss`). If you are running the `$ grunt` process, you may want to restart it when creating new files.
 
+#### Paths
+If you want to reference a `.scss` or `.css` file in your template you *must* use `_compiled` in your path. For example, if your `.scss` file is located at `stylesheets/myfile.scss` your HTML should be `<link rel="stylesheet" href="/_compiled/stylesheets/myfile.css">`.
 
-## License
+### dist/
+This is the compiled version of your web project. You deploy this, and only this, folder to the web server.
 
-MIT
+### Miscellaneous files
+- `.gitignore`: A standard gitignore file to ignore compiled directories and other OS-based files and folders.
+- `.htaccess`: A basic htaccess file provided by the [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess).
+- `gulpfile.js`: A list of the tasks that run on `$ gulp` and `$ gulp build`
+- `package.json`: A list of dependencies for the Grunt tasks.
+
+## Release History
+* 2014-7-20 - v1.0.0 - Initial release
