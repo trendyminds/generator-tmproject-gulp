@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
-var globals = require('../globals');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    prefix = require('gulp-autoprefixer'),
+    plumber = require('gulp-plumber'),
+    notify = require('gulp-notify'),
+    globals = require('../globals');
 
 gulp.task('styles', function () {
 

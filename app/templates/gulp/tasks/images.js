@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var globals = require('../globals');
+var gulp = require('gulp'),
+    imagemin = require('gulp-imagemin'),
+    globals = require('../globals');
 
 gulp.task('images', function () {
 

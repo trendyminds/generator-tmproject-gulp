@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var livereload = require('gulp-livereload');
-var globals = require('../globals');
+var gulp = require('gulp'),
+    livereload = require('gulp-livereload'),
+    globals = require('../globals');
 
 gulp.task('watch', [], function () {
   livereload.listen();

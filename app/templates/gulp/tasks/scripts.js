@@ -1,11 +1,11 @@
-var gulp = require('gulp');
-var browserify = require('gulp-browserify');
-var coffeeify = require('coffeeify');
-var source = require('vinyl-source-stream');
-var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
-var rename = require('gulp-rename');
-var globals = require('../globals');
+var gulp = require('gulp'),
+    browserify = require('gulp-browserify'),
+    coffeeify = require('coffeeify'),
+    source = require('vinyl-source-stream'),
+    plumber = require('gulp-plumber'),
+    notify = require('gulp-notify'),
+    rename = require('gulp-rename'),
+    globals = require('../globals');
 
 gulp.task('scripts', function () {
 
