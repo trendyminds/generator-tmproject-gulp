@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
+    rimraf = require('gulp-rimraf'),
     globals = require('../globals');
 
 gulp.task('build', ['styles', 'scripts'], function () {
@@ -26,5 +27,5 @@ gulp.task('copy', ['clean'], function() {
 
 gulp.task('clean', function() {
   return gulp.src(globals.distPath, {read: false})
-    .pipe(clean());
+    .pipe(rimraf());
 });
