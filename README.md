@@ -78,4 +78,6 @@ This is the compiled version of your web project. You deploy this, and only this
 - `package.json`: A list of dependencies for the Gulp tasks.
 
 ## Release History
+* 2014-9-30 - v1.0.7 - Replace gulp-useref with gulp-usemin
+
 * 2014-7-20 - v1.0.0 - Initial release

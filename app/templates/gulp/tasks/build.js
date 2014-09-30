@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    clean = require('gulp-clean'),
     rimraf = require('gulp-rimraf'),
     globals = require('../globals');
 

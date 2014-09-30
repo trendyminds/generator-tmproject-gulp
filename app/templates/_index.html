@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title><%= projectName %></title>
-  <!-- build:css /assets/stylesheets/styles.css -->
+  <!-- build:css(./app) /assets/stylesheets/styles.css -->
   <link rel="stylesheet" href="/_tmp/stylesheets/styles.css">
   <!-- endbuild -->
 
-  <!-- build:js /assets/javascripts/lib/vendor.js -->
+  <!-- build:js(./app) /assets/javascripts/lib/vendor.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 </head>
 <body>
   <h1>Hello, welcome to <%= projectName %>!</h1>
 
-  <!-- build:js /assets/javascripts/bundle.js -->
+  <!-- build:js(./app) /assets/javascripts/bundle.js -->
   <script src="/_tmp/javascripts/bundle.js"></script>
   <!-- endbuild -->
 </body>

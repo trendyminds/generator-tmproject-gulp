@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    useref = require('gulp-useref'),
+    usemin   = require('gulp-usemin'),
     globals = require('../globals'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
@@ -8,11 +8,11 @@ var gulp = require('gulp'),
 gulp.task('html', function () {
 
   return gulp.src(globals.appPath + '/' + globals.wrapper)
-    .pipe(useref.assets())
-    .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.css', csso()))
-    .pipe(useref.restore())
-    .pipe(useref())
+    .pipe(usemin({
+      outputRelativePath: './',
+      css: [csso(), rev()],
+      js: [uglify(), rev()]
+    }))
     .pipe(gulp.dest(globals.distPath));
 
 });
