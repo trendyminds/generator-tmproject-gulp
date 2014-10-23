@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     globals = require('../globals'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
-    csso = require('gulp-csso');
+    csso = require('gulp-csso'),
+    rev = require('gulp-rev');
 
 gulp.task('html', function () {
 
