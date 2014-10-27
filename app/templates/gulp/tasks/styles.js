@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
+    pixrem = require('gulp-pixrem'),
     prefix = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
@@ -10,6 +11,7 @@ gulp.task('styles', function () {
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(stylus())
     .pipe(prefix())
+    .pipe(pixrem())
     .pipe(gulp.dest(globals.appPath + '/_tmp/stylesheets'))
     .pipe(notify('Gulp successfully compiled your sass files!'));
 });
