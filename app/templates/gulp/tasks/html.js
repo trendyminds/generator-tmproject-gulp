@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    usemin   = require('gulp-usemin'),
+    usemin = require('gulp-usemin'),
     globals = require('../globals'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
