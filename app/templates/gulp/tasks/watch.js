@@ -10,7 +10,7 @@ gulp.task('watch', [], function () {
     globals.appPath + '/_tmp/javascripts/**/*.js'
   ]).on('change', livereload.changed);
 
-  gulp.watch(globals.appPath + '/assets/stylesheets/**/*.scss', ['styles']);
+  gulp.watch(globals.appPath + '/assets/stylesheets/**/*.styl', ['styles']);
   gulp.watch([
       globals.appPath + '/assets/javascripts/**/*.coffee',
       globals.appPath + '/assets/javascripts/**/*.hbs',
