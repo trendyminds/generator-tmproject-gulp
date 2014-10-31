@@ -23,7 +23,7 @@ You will be asked a couple basic questions to start your project up. When you ar
   + bower_components/
   + assets/images/
   + assets/javascripts/
-  + assets/stylesheets/  
+  + assets/stylesheets/
   .htaccess
   index.html
 + dist
@@ -78,6 +78,6 @@ This is the compiled version of your web project. You deploy this, and only this
 - `package.json`: A list of dependencies for the Gulp tasks.
 
 ## Release History
+* 2014-10-31 - v1.0.8 - Fix issue with revving files with usemin
 * 2014-9-30 - v1.0.7 - Replace gulp-useref with gulp-usemin
-
 * 2014-7-20 - v1.0.0 - Initial release
