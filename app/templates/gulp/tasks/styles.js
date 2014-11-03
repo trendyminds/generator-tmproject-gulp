@@ -13,5 +13,5 @@ gulp.task('styles', function () {
     .pipe(prefix())
     .pipe(pixrem())
     .pipe(gulp.dest(globals.appPath + '/_tmp/stylesheets'))
-    .pipe(notify('Gulp successfully compiled your sass files!'));
+    .pipe(notify('Gulp successfully compiled your Stylus files!'));
 });
