@@ -14,7 +14,7 @@ var TmprojectGulpGenerator = yeoman.generators.Base.extend({
       if (!this.options['skip-install']) {
         this.installDependencies({
           callback: function () {
-            this.spawnCommand('gulp', ['build'])
+            this.spawnCommand('gulp', ['build']);
           }.bind(this)
         });
       }
@@ -66,6 +66,7 @@ var TmprojectGulpGenerator = yeoman.generators.Base.extend({
     this.copy('_htaccess', 'app/.htaccess');
     this.copy('_package.json', 'package.json');
     this.copy('_gulpfile.js', 'gulpfile.js');
+    this.copy('_editorconfig', '.editorconfig');
 
     this.mkdir('app/assets/images');
 
@@ -80,7 +81,7 @@ var TmprojectGulpGenerator = yeoman.generators.Base.extend({
     }
 
     if (this.projectTypeCraft || this.projectTypeEE) {
-      this.mkdir('app/uploads')
+      this.mkdir('app/uploads');
     }
 
     this.directory('gulp', 'gulp');

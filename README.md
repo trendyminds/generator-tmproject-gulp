@@ -76,8 +76,3 @@ This is the compiled version of your web project. You deploy this, and only this
 - `.htaccess`: A basic htaccess file provided by the [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess).
 - `gulpfile.js`: A list of the tasks that run on `$ gulp` and `$ gulp build`
 - `package.json`: A list of dependencies for the Gulp tasks.
-
-## Release History
-* 2014-10-31 - v1.0.8 - Fix issue with revving files with usemin
-* 2014-9-30 - v1.0.7 - Replace gulp-useref with gulp-usemin
-* 2014-7-20 - v1.0.0 - Initial release
