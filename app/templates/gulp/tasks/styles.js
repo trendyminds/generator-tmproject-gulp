@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     pixrem = require('gulp-pixrem'),
     prefix = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
+    notify = require('gulp-notify'),
     minifyCSS = require('gulp-minify-css'),
     globals = require('../globals');
 
