@@ -38,7 +38,6 @@ You will be asked a couple basic questions to start your project up. When you ar
 .bowerrc
 .gitignore
 bower.json
-Gemfile
 gulpfile.js
 package.json
 ```
@@ -63,10 +62,10 @@ Place any project images in this directory. Running `$ gulp build` will move you
 CoffeeScript files must be referenced with a `.js` extension. For example, if your CoffeeScript file is located at `javascripts/form/myfile.coffee` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.
 
 ### stylesheets/
-You are able to use `.scss` and `.css` files (though I'd recommend just using `.scss`). If you are running the `$ gulp` process, you may want to restart it when creating new files.
+You are able to use `.styl` and `.css` files (though I'd recommend just using `.styl`). If you are running the `$ gulp` process, you may want to restart it when creating new files.
 
 #### Paths
-If you want to reference a `.scss` or `.css` file in your template you *must* use `_compiled` in your path. For example, if your `.scss` file is located at `stylesheets/myfile.scss` your HTML should be `<link rel="stylesheet" href="/_compiled/stylesheets/myfile.css">`.
+If you want to reference a `.styl` or `.css` file in your template you *must* use `_compiled` in your path. For example, if your `.styl` file is located at `stylesheets/myfile.styl` your HTML should be `<link rel="stylesheet" href="/_compiled/stylesheets/myfile.css">`.
 
 ### dist/
 This is the compiled version of your web project. You deploy this, and only this, folder to the web server.
