@@ -17,6 +17,6 @@ gulp.task('scripts', function () {
     }))
     .pipe(rename('bundle.js'))
     .pipe(gulp.dest(globals.appPath + '/_tmp/javascripts'))
-    .pipe(notify('Gulp successfully compiled your coffeescript files!'));
+    .pipe(notify('Gulp successfully compiled your CoffeeScript files'));
 
 });
