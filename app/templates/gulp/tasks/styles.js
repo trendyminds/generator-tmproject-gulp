@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     pixrem = require('gulp-pixrem'),
     prefix = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
-    notify = require('gulp-notify'),
+    minifyCSS = require('gulp-minify-css'),
     globals = require('../globals');
 
 gulp.task('styles', function () {
@@ -11,7 +11,7 @@ gulp.task('styles', function () {
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(stylus())
     .pipe(prefix())
+    .pipe(minifyCSS())
     .pipe(pixrem())
-    .pipe(gulp.dest(globals.appPath + '/_tmp/stylesheets'))
-    .pipe(notify('Gulp successfully compiled your Stylus files!'));
+    .pipe(gulp.dest(globals.appPath + '/_tmp/stylesheets'));
 });
