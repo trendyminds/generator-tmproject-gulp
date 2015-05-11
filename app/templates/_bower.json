@@ -2,6 +2,6 @@
   "name": "<%= _.slugify(projectName) %>",
   "version": "0.0.0",
   "dependencies": {
-    "modernizr": "~2.6.3"
+    "modernizr": "2.6.3"
   }
 }
