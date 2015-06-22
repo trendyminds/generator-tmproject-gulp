@@ -12,6 +12,7 @@ gulp.task('scripts', function () {
   return gulp.src(globals.appPath + '/assets/javascripts/App.coffee', {read: false})
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(browserify({
+      debug: true,
       transform: ['browserify-handlebars', 'coffeeify'],
       extensions: ['.coffee']
     }))
