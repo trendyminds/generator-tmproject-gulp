@@ -8,7 +8,9 @@ gulp.task('build', ['styles', 'scripts'], function () {
 
 gulp.task('copy', ['clean'], function() {
   var paths = [
-    globals.appPath + '/**/*',
+    globals.appPath + '/**/*.*',
+    globals.appPath + '/.*',
+    globals.appPath + '/**/.htaccess',
     '!' + globals.appPath + '/*.html',
     '!' + globals.appPath + '/assets/{stylesheets,stylesheets/**}',
     '!' + globals.appPath + '/assets/{javascripts,javascripts/**}',
@@ -17,9 +19,7 @@ gulp.task('copy', ['clean'], function() {
     '!' + globals.appPath + '/{_tmp,_tmp/**}'
   ];
 
-  gulp.src(paths)
-    .pipe(gulp.dest(globals.distPath));
-
+  gulp.src(paths).pipe(gulp.dest(globals.distPath));
   gulp.start('images');
   gulp.start('html');
 });
