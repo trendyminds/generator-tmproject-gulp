@@ -55,19 +55,16 @@ If you need to add Fancybox to your project you can search the Bower library for
 `.bowerrc`: Configures the path to the `bower_components` directory (don't change this)
 `bower.json`: Specifies all of the dependencies used in the project.
 
-### images/
+#### images/
 Place any project images in this directory. Running `$ gulp build` will move your images to `dist/images` and compress them.
 
-#### Using CoffeeScript
-CoffeeScript files must be referenced with a `.js` extension. For example, if your CoffeeScript file is located at `javascripts/form/myfile.coffee` your HTML should be `<script src="/_compiled/javascripts/form/myfile.js"></script>`.
-
-### stylesheets/
+#### stylesheets/
 You are able to use `.styl` and `.css` files (though I'd recommend just using `.styl`). If you are running the `$ gulp` process, you may want to restart it when creating new files.
 
 #### Paths
 If you want to reference a `.styl` or `.css` file in your template you *must* use `_compiled` in your path. For example, if your `.styl` file is located at `stylesheets/myfile.styl` your HTML should be `<link rel="stylesheet" href="/_compiled/stylesheets/myfile.css">`.
 
-### dist/
+#### dist/
 This is the compiled version of your web project. You deploy this, and only this, folder to the web server.
 
 ### Miscellaneous files
