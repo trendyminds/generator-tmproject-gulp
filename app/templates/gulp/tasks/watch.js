@@ -12,7 +12,7 @@ gulp.task('watch', [], function () {
 
   gulp.watch(globals.appPath + '/assets/stylesheets/**/*.styl', ['styles']);
   gulp.watch([
-      globals.appPath + '/assets/javascripts/**/*.coffee',
+      globals.appPath + '/assets/javascripts/**/*.js',
       globals.appPath + '/assets/javascripts/**/*.hbs',
     ],
     ['scripts']);
