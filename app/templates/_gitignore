@@ -28,9 +28,3 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
-
-
-
-# Image resize folders
-**/images/sized/**
-**/images/made/**<% } %>
