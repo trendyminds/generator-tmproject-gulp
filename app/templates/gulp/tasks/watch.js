@@ -10,11 +10,18 @@ gulp.task('watch', [], function () {
     globals.appPath + '/_tmp/javascripts/**/*.js'
   ]).on('change', livereload.changed);
 
-  gulp.watch(globals.appPath + '/assets/stylesheets/**/*.styl', ['styles']);
+  gulp.watch(globals.appPath + '/assets/stylesheets/**/*.styl',
+    [
+      'styles',
+      'modernizr'
+    ]);
+
   gulp.watch([
-      globals.appPath + '/assets/javascripts/**/*.js',
-      globals.appPath + '/assets/javascripts/**/*.hbs',
-    ],
-    ['scripts']);
+    globals.appPath + '/assets/javascripts/**/*.js',
+    globals.appPath + '/assets/javascripts/**/*.hbs',
+  ], [
+    'scripts',
+    'modernizr'
+  ]);
 
 });

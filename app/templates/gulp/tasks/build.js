@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
     globals = require('../globals');
 
-gulp.task('build', ['styles', 'scripts'], function () {
+gulp.task('build', ['styles', 'scripts', 'modernizr'], function () {
   return gulp.start('copy');
 });
 
