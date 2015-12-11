@@ -1,9 +1,10 @@
 generator-tmproject-gulp
 ===================
 
-## DEPRECATED!
-### This generator has been succeeded by a new project starter kit. This is no longer being maintained.
+# WARNING: PROJECT DEPRECATION
+This generator has been succeeded by a new project starter kit. This is no longer being maintained.
 
+## General Info
 This is a project generator to quick start a new web project. This Yeoman generator will set up your directories and provide you with two Gulp tasks: `$ gulp` for development and `$ gulp build` to compile your project.
 
 ## Requirements
